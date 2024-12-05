@@ -1,0 +1,25 @@
+{
+  "name": "ccframework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cli:tsc": "tsc -p cli",
+    "cli:build": "npm run cli:tsc && node cli/lib/index.js build",
+    "cli:build:module:actor": "npm run cli:tsc && node cli/lib/index.js build -m actor",
+    "cli:build:module:core": "npm run cli:tsc && node cli/lib/index.js build -m core",
+    "build": "npm run cli:tsc && node cli/lib/index.js build -m *",
+    "pack": "npm run build && npm pack -ws && rm -rf ./.packages/* && mv ./*.tgz ./.packages"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "./modules/*",
+    "cli"
+  ],
+  "dependencies": {
+    "@ccframework/cli": "*"
+  }
+}

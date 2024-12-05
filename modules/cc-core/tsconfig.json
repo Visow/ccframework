@@ -1,0 +1,24 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "types": [
+      "@ccframework/core",
+      "../../@types-cocos/cc",
+      "../../@types-cocos/cc.custom-macro",
+      "../../@types-cocos/jsb",
+      "../../@types-cocos/cc.env"
+    ],
+    "strict": false,
+    "noEmit": true
+  },
+  "include": [
+    "./src/**/*",
+  ],
+  "exclude": [
+    "./test/",
+    "./lib/",
+    "./static/"
+  ]
+}
