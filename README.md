@@ -1,2 +1,2 @@
 # ccframework
-一个cocoscreator的扩张皇家。
+开发中。
